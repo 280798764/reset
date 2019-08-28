@@ -1,0 +1,52 @@
+/* 导航栏样式 */
+@import "~@/assets/styles/color.less";
+
+.nav-wrapper {
+  color: @colorLabel;
+  ul {
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    &:not(:first-child) {
+      border-top: 1px solid @colorPink;
+    }
+    &:last-child {
+      border-bottom: 1px solid @colorPink;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      border-bottom: 1px solid @colorPink;
+      cursor: pointer;
+      &.parent {
+        justify-content: space-between;
+        padding: 10px;
+        span {
+          display: flex;
+          margin-left: 14px;
+          width: 73%;
+          display: inline-block;
+        }
+      }
+      &.child {
+        div {
+          display: flex;
+          flex: 1;
+          align-items: center;
+          height: 100%;
+          padding-left: 52px;
+          &:hover {
+            background: #e5e8ee;
+          }
+          &.router-link-active {
+            background: @colorOrange;
+          }
+        }
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

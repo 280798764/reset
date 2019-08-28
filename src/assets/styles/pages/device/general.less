@@ -1,0 +1,358 @@
+@smallWidth: 1280px;
+@inputHeight: 28px;
+@headerHeight: 60px;
+@footerHeight: 60px;
+
+@textTitle: #344347;
+@textSub: #586F75;
+@textDark: #666;
+@textBlack: #000;
+@textRed: #D6555B;
+@textFoot: #CECECE;
+
+@hoverColor: #DFF6F1;
+@activeColor: #BBE5DF;
+@navBorderColor: #DEE2DC;
+
+.li-style-none {list-style: none;}
+
+.pull-left {float: left;}
+.pull-right {float: right;}
+
+.padding-right-10 {padding-right: 10px}
+
+.hidden {display: none;}
+.show {display: block !important;}
+
+.split-line {
+    width: 100%;
+    height: 1px;
+    background-color: @navBorderColor;
+}
+.class-split {
+    width:100%;
+    height: 19px;
+    border-bottom: solid 1px #d5d3d4;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    line-height: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0,0);
+}
+
+/*线性渐变生成方法*/
+.linear-gradient(@param) {
+    background: linear-gradient(e(@param));
+    background: #FFFFFF\9\0;
+}
+
+/*背景图片*/
+.background-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    &.cover {
+        background-size: cover;
+    }
+}
+/*去浮动*/
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+/* 必填标识 */
+.require {
+    color: red;
+}
+/* 单选按钮 */
+input[type='radio'] {
+    width: 15px;
+    height: 15px;
+    margin-top: 6.5px;
+}
+input[type='radio'] + span {line-height: 28px;}
+
+/*标题栏*/
+.sub-title {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    color: @textTitle;
+    background-color: rgba(154,204,195,.3);
+    border-top: solid 1px @navBorderColor;
+    border-bottom: solid 1px @navBorderColor;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 1px;
+        width: 100%;
+        border-top: solid 1px #FFF;
+        opacity: .5;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 1px;
+        border-bottom: solid 1px #FFF;
+        opacity: .5;
+    }
+
+    &>i {
+        display: inline-block;
+        margin-top: 9px;
+        margin-right: .5em;
+        width: 25px;
+        height: 25px;
+        background-color: rgba(88,111,117,.5);
+        text-align: center;
+        font-size: 15px;
+        line-height: 25px;
+        color: #FFF;
+        border-radius: 4px;
+    }
+
+    .sub-title-btn {
+       /* .btn;
+        .pull-right;
+        margin-left: 8px;
+        margin-top: 8px;
+        width: @inputHeight;*/
+    }
+}
+
+/*.btn {
+    position: relative;
+    width: 70px;
+    height: 28px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 28px;
+    color: #fff;
+    @bg: '#FABF40';
+    .linear-gradient(@bg);
+    border: solid 1px #FABF40;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+        @bg: '#FABF40';
+        .linear-gradient(@bg);
+        border-color: #FABF40;
+    }
+    &:active {
+        @bg: '#FABF40';
+        .linear-gradient(@bg);
+        color: #FFFFFF;
+    }
+}*/
+
+// 查询按钮输入框
+.imdata-input {
+    height: 26px;
+    background-color: #FCFCFC;
+    text-indent: .5em;
+    font-size: 12px;
+    line-height: 26px;
+    color: #586F75;
+    border: solid 1px #C9C9C9;
+    border-radius: 4px;
+    position: relative;
+    width: 100%;
+    outline: none;
+}
+
+/*输入框*/
+.filter {
+    padding: 11px 30px;
+    width: 100%;
+    font-size: 12px;
+    color: #586F75;
+    .filter-title {
+      float: left;
+      min-width: 60px;
+      text-align: right;
+      line-height: 28px;
+      margin-right: 1em;
+      margin-left: 50px;
+    }
+    .filter-input {
+      float: left;
+      margin-right: 1em;
+      width: 200px;
+    }
+    .filter-dlg-add-input{
+      height: 26px;
+      background-color: #FCFCFC;
+      text-indent: .5em;
+      font-size: 12px;
+      line-height: 26px;
+      color: #586F75;
+      border: solid 1px #B6C4C6;
+      border-radius: 4px;
+      position: relative;
+    }
+    .filter-input-long {
+      width: 260px;
+    }
+    .filter-btn {
+      float: left;
+      width: 28px;
+    }
+    .filter-textarea{
+        float: left;
+        margin-right: 1em;
+        width: 554px;
+        height: 50px;
+        background-color: #FCFCFC;
+        text-indent: .5em;
+        font-size: 12px;
+        color: #586F75;
+        border: solid 1px #B6C4C6;
+        border-radius: 4px;
+        position: relative;
+    }
+}
+.filter:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+// 表格样式
+.table-frame {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.imdata-table {
+    @borderColor: #F1F2F6;
+    margin-top: 10px;
+    width: 100%;
+    border-top: solid 2px rgba(66,209,188,.3);
+    &:first-child {
+        margin-top: 0;
+    }
+    thead {
+        tr th {
+            padding-left: 1em;
+            padding-right: 1em;
+            height: 30px;
+            text-align: center;
+            font-weight: normal;
+            line-height: 30px;
+            color: @textDark;
+            background-color: rgba(154,204,195,.1);
+            border-top: solid 1px #FFF;
+            border-left: solid 1px #FFF;
+            border-bottom: solid 10px #FFF;
+            white-space: nowrap;
+            &:first-child {
+                border-left: none 0;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                padding-bottom: 3px;
+                width: auto;
+                height: 40px;
+                text-align: center;
+                color: #7E9EA5;
+                &>div {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    height: 100%;
+                    vertical-align: middle;
+                    white-space: nowrap;
+                    line-height: 37px;
+                    border-left: solid 1px @borderColor;
+                    border-top: solid 1px @borderColor;
+                    border-bottom: solid 1px @borderColor;
+                }
+                &:last-child>div {
+                    border-right: solid 1px @borderColor;
+                }
+            }
+        }
+    }
+}
+// 表格编辑图标按钮
+.lbtn {
+    font-size: 12px;
+    color: #757575;
+    cursor: pointer;
+    &:hover {
+        color: #52DD98;
+    }
+    &:active {
+        color: #678272;
+    }
+    &.disable {
+        color: #CCCCCC;
+        cursor: default;
+    }
+}
+
+/*分页*/
+.page {
+    margin: 25px auto;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #7E9EA5;
+
+    &-input {
+        margin: 0 .5em;
+        width: 50px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        background-color: #FCFCFC;
+        border: solid 1px #B6C4C6;
+    }
+
+    &-btn {
+        .lbtn;
+        display: inline-block;
+        margin: 0 .5em;
+    }
+}
+
+/* tab */
+.tab-content {
+    width: 100%;
+    height: 36px;
+    div {
+      width: 25%;
+      height: 36px;
+      line-height: 36px;
+      float: left;
+      text-align: center;
+    }
+    .tab-selected {
+      @bg: 'to top, #84BCA2 0%, #83B89F 37%, #779684 100%';
+      .linear-gradient(@bg);
+      color: #FFFFFF;
+    }
+}

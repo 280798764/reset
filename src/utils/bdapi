@@ -1,0 +1,7 @@
+import { DOMAIN } from '@/utils/config'
+
+export default {
+  bdLocationApi (point, ak) {
+    return DOMAIN.bdapi + '&location=' + point.lat + ',' + point.lng + '&ak=' + ak
+  }
+}
